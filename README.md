@@ -116,6 +116,7 @@ Creates a S3rver instance
 | directory                      | `string`             |                 | Data directory
 | resetOnClose                   | `boolean`            | `false`         | Remove all bucket data on server close
 | allowMismatchedSignatures      | `boolean`            | `false`         | Prevent `SignatureDoesNotMatch` errors for all well-formed signatures
+| maxRequestSkewTime             | `number`             | `900000`        | How much skew time is allowed on a request before a `RequestTooSkewed` error is generated
 | vhostBuckets                   | `boolean`            | `true`          | Allow vhost-style access for all buckets
 | configureBuckets\[].name       | `string`             |                 | The name of a prefabricated bucket to create when the server starts
 | configureBuckets\[].configs\[] | `string` \| `Buffer` |                 | Raw XML string or Buffer of Bucket config
